@@ -1,0 +1,23 @@
+1.getProperty
+   String baseDir=System.getProperty("dir.user");
+   
+2.setProperty   
+	System.setProperty("webdriver.chrome.driver",baseDir+"\\src\\test\\resources\\drivers\\chromedriver.exe");
+	
+3.getProperty and setProperty By using WebDriverManager
+
+		WebDriverManager.chromedriver().setup();
+		
+4.WebDriver is an interface 
+  ChromeDriver ia sn class
+  (initialize webdriver)
+        WebDriver driver=new ChromeDriver();
+        
+5.Navigate to URL    (launch browser)   
+        driver.get("http://google.com");
+        
+6.getCurrentUrl
+       System.out.println("CurrentUrl :"+driver.getCurrentUrl());
+       
+7.getTitle
+        System.out.println("Title :"+driver.getTitle());

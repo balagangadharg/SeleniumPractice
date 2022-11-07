@@ -1,0 +1,25 @@
+Types of locators
+
+1. Id- Fastest locator and unique
+driver.findElement(By.id("checkBoxOption1"))
+
+2. Name- 
+driver.findElement(By.name("radioButton"))
+
+3. ClassName-
+driver.findElements(By.className("radioButton"))
+
+4. TagName-
+driver.findElements(By.tagName("a"))
+
+5. LinkText-
+driver.findElement(By.linkText("Home"))
+
+6. PartialLinkText-
+driver.findElement(By.partialLinkText("ome"))
+
+7. Xpath-
+driver.findElement(By.xpath("//input[@value='radio3']"))
+
+8. CSSelector- Faster than Xpath locator
+driver.findElement(By.cssSelector("input[value='radio2']"))
