@@ -1,6 +1,9 @@
 package SeleniumPractice;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,28 +17,24 @@ public class Demo {
 
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://www.saucedemo.com/");
+		driver.get("https://rahulshettyacademy.com/AutomationPractice/");
 		driver.manage().window().maximize();
 
-		WebElement user = driver.findElement(By.id("user-name"));
-		user.sendKeys("problem_user");
-		Thread.sleep(3000);
+//		WebElement chckbox = driver.findElement(By.id("checkBoxOption2"));
+//		chckbox.click();
+//		System.out.println(chckbox.getTagName());
+		List<WebElement> chckboxs = driver.findElements(
+				By.xpath("//div[@id='checkbox-example']/descendant::label/descendant::input[@type='checkbox']"));
+		System.out.println(chckboxs.size());
 
-		WebElement pwd = driver.findElement(By.id("password"));
-		pwd.sendKeys("secret_sauce");
-		Thread.sleep(3000);
+		for (int i = 0; i <= chckboxs.size(); i++) {
+			System.out.println(i);
+			chckboxs.get(i).click();
+			Thread.sleep(5000);
+			System.out.println(chckboxs.get(i).getTagName());
+			
+		}
 
-		WebElement login = driver.findElement(By.id("login-button"));
-		login.click();
-		Thread.sleep(3000);
-
-		WebElement menu = driver.findElement(By.xpath("//button[text()='Open Menu']"));
-		menu.click();
-		Thread.sleep(3000);
-
-		WebElement logout = driver.findElement(By.xpath("//a[text()='Logout']"));
-		logout.click();
-		
 		driver.quit();
 
 	}
