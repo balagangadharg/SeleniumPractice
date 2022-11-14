@@ -36,7 +36,7 @@ public class Demo {
 		WebElement logout = driver.findElement(By.xpath("//a[text()='Logout']"));
 		logout.click();
 		
-		driver.close();
+		driver.quit();
 
 	}
 
