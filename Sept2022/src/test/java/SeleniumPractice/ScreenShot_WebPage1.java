@@ -48,7 +48,7 @@ public class ScreenShot_WebPage1 {
 			generateScreenshot();
 			Thread.sleep(5000);
 
-			System.out.println("Screenshot at (0, " + i + ") Sucessfully Taken!");
+			System.out.println("Screenshot at(0, " + i + ") Sucessfully Taken!");
 		}
 
 	}
