@@ -1,17 +1,21 @@
 package TestNGPractice;
 
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterGroups;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeGroups;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class Annotations {
+//BeforeSuite > BeforeTest > BeforeClass > BeforeMethod > Test
 
+public class Annotations { 
+ 
 	@BeforeSuite
 
 	public void beforeSuite() {
@@ -60,4 +64,12 @@ public class Annotations {
 	public void test2() {
 		System.out.println("I am in Test2");
 	}
+//	@BeforeGroups("Sanity")
+//	public void beforeGroup() {
+//		System.out.println("I am in beforeGroup");
+//	}
+//	@AfterGroups
+//	public void afterGroup() {
+//		System.out.println("I am in afterGroup");
+//	}
 }

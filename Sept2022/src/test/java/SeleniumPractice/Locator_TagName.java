@@ -22,7 +22,7 @@ public class Locator_TagName {
 		 List<WebElement> Links=driver.findElements(By.tagName("a"));
 		 System.out.println("Total Links"+Links.size() );
 		    for (WebElement Link : Links) {		    	
-		    	System.out.println(Link.getText());
+		    	System.out.println(Link.getText()); 
 			}
 
 	}

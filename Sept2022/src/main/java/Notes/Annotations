@@ -1,0 +1,55 @@
+1. What is diferrence between findelement and findelements?
+
+The findElement points to a single element, while the findElements method returns a list of matching elements.The return type of findElements is a list but the return type of findElement is a WebElement. If there is no matching element, a NoSuchElementException is thrown by the findElement, however an empty list is returned by the findElements method.
+
+2. What is diferrence between getwindowhandle and getwindowhandles?
+
+getWindowHandle() and getWindowHandles() methods have some prominent differences.
+driver.getWindowHandles() – It stores the set of handles for all the pages opened simultaneously.
+driver.getWindowHandle() – It fetches the handle of the web page which is in focus. It gets the address of the active browser and it has a return type of String.
+
+3. What is diferrence between close and quit?
+
+The close() method closes the present window on which we are working. While quit() method suspends all the driver sessions and instances, thereby closing each opened window.
+
+4. What is diferrence between absolutexapth and relative xpath?
+
+An absolute xpath starts with the / symbol. One drawback with the absolute xpath is that if there is any change in attributes beginning from the root to the element, our absolute xpath will become invalid.The relative xpath starts by referring to the element that we want to identify and not from the root node. A relative xpath starts with the // symbol.An absolute xpath is lengthy and difficult to maintain (html/body/tagname/…). While a relative xpath is short (//*[@attribute='value']).
+
+5. What is diferrence between xpath and cssSelector?
+
+The format of xpath is //tagname[@attribute='value'] while the format of css selector is tagname[attribute='value'].We can traverse both forward and backward in DOM, i.e we can move from parent to child element and also from child to the parent element with xpath. However for css, we can only traverse from parent to child and not vice-versa.In terms of performance, css is better and faster, while xpath is on a slower side.
+
+6. Why string is immutable?
+
+A String is an unavoidable type of variable while writing any application program. String references are used to store various attributes like username, password, etc. In Java, String objects are immutable. Immutable simply means unmodifiable or unchangeable.Once String object is created its data or state can't be changed but a new String object is created.The string is immutable means that we cannot change the object itself, but we can change the reference to the object. 
+
+https://www.tutorialspoint.com/selenium/selenium_automation_practice.htm
+
+I am in BeforeSuite
+I am in BeforeTest
+I am in BeforeClass
+I am in BeforeMethod
+I am in Test1
+I am in afterMethod
+I am in BeforeMethod
+I am in Test2
+I am in afterMethod
+I am in afterClass
+I am in afterTest
+PASSED: test1
+PASSED: test2
+
+===============================================
+    Default test
+    Tests run: 2, Failures: 0, Skips: 0
+===============================================
+
+I am in afterSuite
+
+===============================================
+Default suite
+Total tests run: 2, Passes: 2, Failures: 0, Skips: 0
+===============================================
+
+

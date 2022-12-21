@@ -23,7 +23,7 @@ public class Action_Resizable {
 		Thread.sleep(5000);
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.className("demo-frame")));
 
-//		driver.switchTo().frame(0);
+//		driver.switchTo().frame(0);width: 362px; height: 173px;
 		WebElement element = driver.findElement(By.xpath("//*[@class='ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se']"));
 
 		Actions action = new Actions(driver);

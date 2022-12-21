@@ -7,8 +7,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import com.google.common.collect.Iterators;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Open_New_Window {
@@ -30,7 +28,7 @@ public class Open_New_Window {
 		Iterator<String> itr = windows.iterator();
 		String parent = itr.next();
 		String child = itr.next();
-
+		
 		System.out.println("Parent Window id :" + parent);
 		System.out.println("Parent Window URL :" + driver.getCurrentUrl());
 		System.out.println("Parent Window Title :" + driver.getTitle());

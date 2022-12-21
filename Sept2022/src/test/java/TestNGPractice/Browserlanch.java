@@ -16,10 +16,10 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class Browserlanch {
 
 	public String baseUrl = "http://demo.guru99.com/test/newtours/";
-	public WebDriver driver;
+	public WebDriver driver; 
 	
 
-	@BeforeClass
+	@BeforeClass 
 	public void initiate() {
 
 		WebDriverManager.chromedriver().setup();

@@ -17,8 +17,8 @@ public class Alert_Practice_Headless_Mode {
 
 		WebDriverManager.chromedriver().setup();
 		ChromeOptions options=new ChromeOptions();
-		options.addArguments("--headless");
-		WebDriver driver=new ChromeDriver(options);
+//		options.addArguments("--headless");
+		WebDriver driver=new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://the-internet.herokuapp.com/javascript_alerts");
 		
